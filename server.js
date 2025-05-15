@@ -1,14 +1,13 @@
 require("dotenv").config();
 const express = require("express");
 const db = require("./db");
-const initDatabase = require("./init-db");
 const app = express();
-
-// Inicializar la base de datos
-initDatabase();
 
 // Middleware para procesar JSON
 app.use(express.json());
+
+// Servir archivos estáticos desde la carpeta 'public'
+app.use(express.static("public"));
 
 app.get("/usuarios", async (req, res) => {
   const result = await db.query("SELECT * FROM usuarios");

@@ -2,9 +2,10 @@ require("dotenv").config();
 const express = require("express");
 const db = require("./db");
 const app = express();
+const initDatabase = require("./init-db"); // Importar el módulo init-db.js
 
 // Inicializar la base de datos
-initDatabase();
+initDatabase(); // Función para inicializar la base de datos
 
 // Middleware para procesar JSON
 app.use(express.json());

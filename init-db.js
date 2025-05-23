@@ -19,4 +19,4 @@ async function initDatabase() {
   }
 }
 
-module.exports = initDatabase;
+module.exports = initDatabase; // Exporta la función para inicializar la base de datos

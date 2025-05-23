@@ -1,5 +1,5 @@
-require("dotenv").config();
-const db = require("./db");
+require("dotenv").config(); // Carga las variables de entorno desde .env
+const db = require("./db"); // Importa la conexión a la base de datos
 
 async function initDatabase() {
   try {

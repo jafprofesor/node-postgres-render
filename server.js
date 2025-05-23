@@ -3,6 +3,9 @@ const express = require("express");
 const db = require("./db");
 const app = express();
 
+// Inicializar la base de datos
+initDatabase();
+
 // Middleware para procesar JSON
 app.use(express.json());
 
